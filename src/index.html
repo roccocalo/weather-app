@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="icon" href="icon/sun.svg">
     <link href="./output.css" rel="stylesheet">
+    <script defer src="main.js"></script>
 </head>
-<body>
-    
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+<body class="m-0 p-0">
+
+    <div class="flex flex-row gap-3 justify-center items-center p-2 bg-slate-400 border-b border-slate-700">
+        <img src="icon/sun.svg" alt="sun svg" class="max-h-24">
+        <h1 class="text-4xl text-slate-800">Weather App</h1>
+    </div>
+
+    <div class="mt-10">
+        <form action="" data-form>
+            <div class="flex flex-row gap-2 justify-center items-center">
+                <img src="icon/search.svg" alt="sun svg" id="search-icon"
+                    class="h-8 mt-1 hover:cursor-pointer transition ease-in-out delay-150 hover:scale-125 duration-300">
+                <input type="text" name="searchbar" autocomplete="off" placeholder="location" value="Rome"
+                    id="search-bar"
+                    class="border-b border-slate-700 text-3xl max-w-36 text-slate-800 outline-none focus: ">
+            </div>
+        </form>
+    </div>
+
+    <div
+        class="flex flex-col gap-3 justify-center items-center p-2 border-2 border-slate-700 mx-auto max-w-xs mt-12 text-2xl  bg-slate-200">
+        <h1 id="city-name" class="text-slate-800 font-bold">Rome</h1>
+        <div class="flex flex-row gap-2 justify-center items-center -my-2">
+            <img src="" alt=" icon" id="weather-icon" class="max-h-13">
+            <p id="current-weather"></p>
+        </div>
+        <p id="celsius"></p>
+        <p id="feels-celsisus"></p>
+        <p id="wind-speed"></p>
+        <p id="humidity"></p>
+        <p id="rain"></p>
+    </div>
+
+    <p id="error-text" class=" mt-10 flex items-center justify-center text-2xl text-slate-800"></p>
 
 </body>
 </html>
